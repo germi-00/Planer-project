@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "PT-Serif";
+    src: url(../fonts/PT_Serif/PTSerif-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+%text-font {
+font-family: "PT-Serif", sans-serif;
+color: #28514F;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: 55px;
+}
+%text-font_size_m {
+    font-family:  "PT-Serif", sans-serif;
+    color:#65727B;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+}
+%text-font_size_s {
+    font-family: "Roboto", sans-serif;
+    color: #1B1F2B;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+}
+%text-font_size_xs {
+    font-family: "Roboto", sans-serif;
+    color: #1B1F2B;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+}
