@@ -1,2 +1,72 @@
 @import 'fonts';
 @import 'vars';
+
+body {
+    background: #F9F7F4;
+
+    .container {
+        max-width: 1440px;
+        margin: auto;
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 6.25rem;
+            border-bottom: 2px solid rgba(40, 81, 79, 0.30);
+
+            background: #F9F7F4;
+
+            .logo {
+                @extend %text-font_size_m;
+                font-size: 3.625rem;
+                font-style: normal;
+                line-height: 3.48rem;
+            }
+
+            .header__date_and_time {
+                display: flex;
+                color: #28514F;
+                @extend %text-font_size_m;
+                font-size: 1.875rem;
+                line-height: 3.48rem;
+                margin: 2.19rem 5.75rem 1.87rem 4.44rem;
+
+                .header__date_and_time__date {
+                    padding: 0 1.62rem 0 0;
+                }
+            }
+
+            .header__menu {
+                display: flex;
+                list-style-type: none;
+
+                .header__menu__element {
+                    text-decoration: none;
+                    @extend %text-font_size_xs;
+                    font-size: 1.5rem;
+                    line-height: 1.41rem;
+                    padding: 0 1.405rem 0 1.405rem;
+                }
+            }
+
+            .header__button__login {
+                border-radius: 3.125rem;
+                background: #28514F;
+                width: 9.75rem;
+                height: 3.5rem;
+                flex-shrink: 0;
+                border: none;
+
+                .header__button__login__text {
+                    text-decoration: none;
+                    color: #FFF;
+                    @extend %text-font_size_m;
+                    font-size: 1.625rem;
+                    line-height: 1.41rem;
+
+                }
+            }
+        }
+    }
+}

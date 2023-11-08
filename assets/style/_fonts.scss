@@ -16,39 +16,37 @@
 %text-font {
     font-family: "Noto-Serif", sans-serif;
     color: #28514F;
-    font-size: 4rem;
+    font-style: normal;
     font-weight: 600;
-    line-height: 3.48rem;
 }
 
 %text-font_size_m {
-    font-family: "Noto-Serif", sans-serif;
+    font-family: "Noto-Serif";
     color: #28514F;
-    font-size: 3.625rem;
+    font-style: normal;
+    text-align: center;
+    font-family: "Noto-Serif";
+    font-style: normal;
     font-weight: 700;
-    line-height: 3.48rem;
 }
 
 %text-font_size_s {
-    font-family: "Noto-Serif", sans-serif;
+    font-family: "Noto-Serif";
+    font-style: normal;
     color: rgba(40, 81, 79, 0.50);
     font-weight: 500;
-    font-size: 2rem;
-    line-height: 1.25rem;
 }
 
 %text-font_size_xs {
     font-family: "Noto-Serif", sans-serif;
+    font-style: normal;
     color: #65727B;
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 3.48rem;
 }
 
-%text-font_size_m {
+%text-font_size_l {
     font-family: "Noto-Serif", sans-serif;
+    font-style: normal;
     color: #28514F;
-    font-size: 3.625rem;
     font-weight: 800;
-    line-height: 3.48rem;
 }
