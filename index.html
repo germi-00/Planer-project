@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/style/Normalize.css" />
+  <link rel="stylesheet" href="./assets/style/style.css" />
+  <title>Planer</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__logo">
+        <h3 class="logo">planner</h3>
+      </div>
+      <div class="header__date_and_time">
+        <p class="header__date_and_time__date">08.11.2023</p>
+        <p class="hedaer__date_and_time__time">16:40</p>
+      </div>
+      <ul class="header__menu">
+        <li><a class="header__menu__element" href="#">Раздел</a></li>
+        <li><a class="header__menu__element" href="#">Раздел</a></li>
+        <li><a class="header__menu__element" href="#">Раздел</a></li>
+      </ul>
+      <div class="header__button">
+        <button class="header__button__login"><a class="header__button__login__text" href="#">Войти</a></button>
+      </div>
+    </header>
+    <main class="main"></main>
+    <section class="block__task">
+      <div class="block__task__header">
+        <h1 class="block__task__header">Планируйте свою жизнь</h1>
+      </div>
+      <div class="block__task__input">
+        <input type="text" class="block__task__input__entry_field" id="task__input" placeholder="Введите задачу">
+        <button class="block__task__button"><a class="block__task__button__text" href="#">Добавить</a></button>
+      </div>
+      <div class="block__task_list">
+        <div class="block__task_list__task">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="checkboxTask" class="checkbox__task">
+            <div class="checkbox__circle"></div>
+            <div class="block__task_list__task__text">
+              <p class="task__text__heading">Задача</p>
+              <p class="task__text__comment">Коммментарий</p>
+            </div>
+          </label>
+        </div>
+    </section>
+    <section class="block__image">
+      <img src="./assets/image/houses.png">
+    </section>
+    <footer class="footer">
+      <div class="footer__logo">
+        <h3 class="logo">planner</h3>
+        <p class="footer__itgirls">
+          © 2023. ITGIRLS
+        </p>
+      </div>
+      <div class="footer__second">
+        <div class="footer__autors">
+          Екатерина, Анна, Вероника, Ирина, Екатерина, Мария, Нина
+        </div>
+        <ul class="footer__menu">
+          <li><a class="footer__menu__element" href="#">Раздел</a></li>
+          <li><a class="footer__menu__element" href="#">Раздел</a></li>
+          <li><a class="footer__menu__element" href="#">Раздел</a></li>
+        </ul>
+        <div class="footer__school_logo">
+          <img src="./assets/image/logo_itgirls.png">
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./assets/scripts/index.js"></script>
+</body>
+
+</html>

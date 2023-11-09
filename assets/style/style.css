@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "PT-Serif";
+  src: url(../fonts/PT_Serif/PTSerif-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Noto-Serif";
+  src: url(../fonts/Noto_Serif/N);
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__heading, body .container .block__task__header {
+  font-family: Noto Serif;
+  color: #28514F;
+  font-style: normal;
+  font-weight: 600;
+}
+
+body .container footer .footer__logo .logo, body .container .header .header__button__login .header__button__login__text, body .container .header .header__date_and_time, body .container .header .logo {
+  font-family: Noto Serif;
+  color: #28514F;
+  font-style: normal;
+  text-align: center;
+  font-family: "Noto-Serif";
+  font-style: normal;
+  font-weight: 700;
+}
+
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__comment, body .container .block__task__input .block__task__input__entry_field {
+  font-family: Noto Serif;
+  font-style: normal;
+  color: rgba(40, 81, 79, 0.5);
+  font-weight: 500;
+}
+
+body .container footer .footer__second .footer__menu .footer__menu__element, body .container footer .footer__second .footer__autors, body .container footer .footer__logo .footer__itgirls, body .container .header .header__menu .header__menu__element {
+  font-family: Noto Serif;
+  font-style: normal;
+  color: #65727B;
+  font-weight: 400;
+}
+
+body .container .block__task__input .block__task__button .block__task__button__text {
+  font-family: Noto Serif;
+  font-style: normal;
+  color: #28514F;
+  font-weight: 800;
+}
+
+body {
+  background: #F9F7F4;
+}
+body .container {
+  max-width: 1440px;
+  margin: auto;
+}
+body .container .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6.25rem;
+  border-bottom: 2px solid rgba(40, 81, 79, 0.3);
+  background: #F9F7F4;
+}
+body .container .header .logo {
+  font-size: 3.625rem;
+  font-style: normal;
+  line-height: 3.48rem;
+}
+body .container .header .header__date_and_time {
+  display: flex;
+  color: #28514F;
+  font-size: 1.875rem;
+  line-height: 3.48rem;
+  margin: 2.19rem 5.75rem 1.87rem 4.44rem;
+}
+body .container .header .header__date_and_time .header__date_and_time__date {
+  padding: 0 1.62rem 0 0;
+}
+body .container .header .header__menu {
+  display: flex;
+  list-style-type: none;
+}
+body .container .header .header__menu .header__menu__element {
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1.41rem;
+  padding: 0 1.405rem 0 1.405rem;
+}
+body .container .header .header__button__login {
+  border-radius: 3.125rem;
+  background: #28514F;
+  width: 9.75rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border: none;
+}
+body .container .header .header__button__login .header__button__login__text {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.625rem;
+  line-height: 1.41rem;
+}
+body .container .block__task__header {
+  font-size: 4rem;
+  line-height: 3.48rem;
+  margin: 5.25rem 0 6.69rem 0;
+  display: flex;
+  justify-content: center;
+}
+body .container .block__task__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .block__task__input .block__task__input__entry_field {
+  width: 28.25rem;
+  height: 5.125rem;
+  border-radius: 2.5rem 0rem 0rem 2.5rem;
+  background: #FFF;
+  box-shadow: 0px 4px 0px 0px rgba(167, 167, 167, 0.16);
+  border: none;
+  color: rgba(40, 81, 79, 0.5);
+  font-size: 2rem;
+  line-height: 1.25rem;
+  padding: 0 0 0 3.12rem;
+}
+body .container .block__task__input .block__task__button {
+  width: 11.84263rem;
+  height: 5.125rem;
+  border-radius: 0rem 2.5rem 2.5625rem 0.0625rem;
+  background: #28514F;
+  box-shadow: 0px 4px 0px 0px rgba(167, 167, 167, 0.16);
+  border: none;
+}
+body .container .block__task__input .block__task__button .block__task__button__text {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  text-transform: capitalize;
+}
+body .container .block__task_list {
+  margin: 5.38rem 0 5rem 20.94rem;
+  display: flex;
+}
+body .container .block__task_list .block__task_list__task {
+  display: flex;
+  width: 2.1875rem;
+  height: 2.125rem;
+  flex-shrink: 0;
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline {
+  display: flex;
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline .checkbox__task {
+  fill: #F4F0E9;
+  stroke-width: 4px;
+  stroke: #28514F;
+  fill: #F4F0E9;
+  stroke-width: 4px;
+  stroke: #28514F;
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline .checkbox__circle {
+  width: 2.1875rem;
+  height: 2.125rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid #28514F;
+  background-color: transparent;
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 0 0 1.12rem;
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__heading {
+  font-size: 1.875rem;
+  margin: 0;
+}
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__comment {
+  color: #65727B;
+  font-size: 1.25rem;
+  margin: 0;
+}
+body .container .block__image {
+  background: rgba(40, 81, 79, 0.7);
+}
+body .container footer {
+  padding: 1.13rem 6rem;
+}
+body .container footer .footer__logo {
+  display: flex;
+  flex-direction: column;
+}
+body .container footer .footer__logo .logo {
+  font-size: 3.625rem;
+  font-style: normal;
+  line-height: 3.48rem;
+  text-align: start;
+}
+body .container footer .footer__logo .footer__itgirls {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin: 1.5rem 0 2rem 0;
+}
+body .container footer .footer__second {
+  display: flex;
+  align-items: flex-end;
+}
+body .container footer .footer__second .footer__autors {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  width: 21.375rem;
+  height: 2.875rem;
+}
+body .container footer .footer__second .footer__menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0 0 0 12rem;
+}
+body .container footer .footer__second .footer__menu .footer__menu__element {
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1.41rem;
+  padding: 0 1.405rem 0 1.405rem;
+}
+body .container footer .footer__second .footer__school_logo {
+  padding: 0 0 0 5.52rem;
+}/*# sourceMappingURL=style.css.map */
