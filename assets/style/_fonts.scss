@@ -2,37 +2,51 @@
     font-family: "PT-Serif";
     src: url(../fonts/PT_Serif/PTSerif-Regular.ttf);
 }
+
 @font-face {
     font-family: "Roboto";
     src: url(../fonts/Roboto/Roboto-Regular.ttf);
 }
+
+@font-face {
+    font-family: "Noto-Serif";
+    src: url(../fonts/Noto_Serif/N)
+}
+
 %text-font {
-font-family: "PT-Serif", sans-serif;
-color: #28514F;
-font-size: 48px;
-font-style: normal;
-font-weight: 600;
-line-height: 55px;
-}
-%text-font_size_m {
-    font-family:  "PT-Serif", sans-serif;
-    color:#65727B;
-    font-size: 21px;
+    font-family: Noto Serif;
+    color: #28514F;
     font-style: normal;
-    font-weight: 400;
-    line-height: 31px;
+    font-weight: 600;
 }
-%text-font_size_s {
-    font-family: "Roboto", sans-serif;
-    color: #1B1F2B;
+
+%text-font_size_m {
+    font-family: Noto Serif;
+    color: #28514F;
+    font-style: normal;
+    text-align: center;
+    font-family: "Noto-Serif";
+    font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 47px;
 }
+
+%text-font_size_s {
+    font-family: Noto Serif;
+    font-style: normal;
+    color: rgba(40, 81, 79, 0.50);
+    font-weight: 500;
+}
+
 %text-font_size_xs {
-    font-family: "Roboto", sans-serif;
-    color: #1B1F2B;
+    font-family: Noto Serif;
+    font-style: normal;
+    color: #65727B;
     font-weight: 400;
-    font-size: 17px;
-    line-height: 23px;
+}
+
+%text-font_size_l {
+    font-family: Noto Serif;
+    font-style: normal;
+    color: #28514F;
+    font-weight: 800;
 }
