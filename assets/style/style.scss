@@ -233,3 +233,26 @@ body {
         }
     }
 }
+
+
+// Стили для раздела с цитатами
+
+.block__quotes {
+    height: 50vh;
+    text-align: center;
+}
+
+.block__quotes_header-text {
+    @extend %text-font;
+    font-size: 4rem;
+    line-height: 3.48rem;
+    margin: 10.25rem 0 6.69rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.block__quotes_quote-text {
+    @extend %text-font;
+    font-size: 1.875rem;
+}
+

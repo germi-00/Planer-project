@@ -10,7 +10,7 @@
   font-family: "Noto-Serif";
   src: url(../fonts/Noto_Serif/N);
 }
-body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__heading, body .container .block__task__header {
+.block__quotes_quote-text, .block__quotes_header-text, body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__heading, body .container .block__task__header {
   font-family: Noto Serif;
   color: #28514F;
   font-style: normal;
@@ -230,4 +230,23 @@ body .container footer .footer__second .footer__menu .footer__menu__element {
 }
 body .container footer .footer__second .footer__school_logo {
   padding: 0 0 0 5.52rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.block__quotes {
+  height: 50vh;
+  text-align: center;
+}
+
+.block__quotes_header-text {
+  font-size: 4rem;
+  line-height: 3.48rem;
+  margin: 10.25rem 0 6.69rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.block__quotes_quote-text {
+  font-size: 1.875rem;
+}
+
+/*# sourceMappingURL=style.css.map */
