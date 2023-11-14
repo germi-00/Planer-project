@@ -123,13 +123,19 @@ body {
 
             .block__task_list__task {
                 display: flex;
-                width: 2.1875rem;
-                height: 2.125rem;
+                // width: 2.1875rem;
+                // height: 2.125rem;
                 flex-shrink: 0;
 
                 .checkbox-inline {
                     display: flex;
-
+                    .block__task_list__task__text {
+                        .task__text__list {
+                            list-style: none;
+                            @extend %text-font;
+                            font-size: 1.5rem;
+                        }
+                    }
                     .checkbox__task {
                         fill: #F4F0E9;
                         stroke-width: 4px;
@@ -233,3 +239,26 @@ body {
         }
     }
 }
+
+
+// Стили для раздела с цитатами
+
+.block__quotes {
+    height: 50vh;
+    text-align: center;
+}
+
+.block__quotes_header-text {
+    @extend %text-font;
+    font-size: 4rem;
+    line-height: 3.48rem;
+    margin: 10.25rem 0 6.69rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.block__quotes_quote-text {
+    @extend %text-font;
+    font-size: 1.875rem;
+}
+

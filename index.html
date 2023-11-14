@@ -16,8 +16,8 @@
         <h3 class="logo">planner</h3>
       </div>
       <div class="header__date_and_time">
-        <p class="header__date_and_time__date">08.11.2023</p>
-        <p class="hedaer__date_and_time__time">16:40</p>
+        <p class="header__date_and_time__date" id="header__date_and_time__date"></p>
+        <p class="hedaer__date_and_time__time" id="hedaer__date_and_time__time"></p>
       </div>
       <ul class="header__menu">
         <li><a class="header__menu__element" href="#">Раздел</a></li>
@@ -40,11 +40,12 @@
       <div class="block__task_list">
         <div class="block__task_list__task">
           <label class="checkbox-inline">
-            <input type="checkbox" id="checkboxTask" class="checkbox__task">
-            <div class="checkbox__circle"></div>
+            <!-- <input type="checkbox" id="checkboxTask" class="checkbox__task">
+            <div class="checkbox__circle"></div> -->
             <div class="block__task_list__task__text">
-              <p class="task__text__heading">Задача</p>
-              <p class="task__text__comment">Коммментарий</p>
+              <p class="task__text__heading">Список задач</p>
+              <ul class="task__text__list"></ul>
+              <!-- <p class="task__text__comment">Коммментарий</p> -->
             </div>
             <div class="task__stopwatch" id="stopwatch">00:00:00</div>
   <button id="startBtn">Старт</button>
@@ -78,7 +79,7 @@
       </div>
     </footer>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
   <script src="./assets/scripts/index.js"></script>
 </body>
 
