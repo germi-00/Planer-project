@@ -11,11 +11,11 @@ const addTaskButton = document.querySelector('.block__task__button__text');
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 function schowTaskList() {
     taskList.innerHTML = '';
-    tasks.forEach(function(task, index) {
+    tasks.forEach(function (task, index) {
         const taskListItem = document.createElement('li');
-        taskListItem.innerHTML = `<input type='checkbox' ${task.done? 'checked' : ''} />
+        taskListItem.innerHTML = `<input type='checkbox' ${task.done ? 'checked' : ''} />
         <span>${task.text}</span>`;
-        taskListItem.querySelector('input').addEventListener('change', function() {
+        taskListItem.querySelector('input').addEventListener('change', function () {
             tasks[index].done = this.checked;
             updateLocalStorage();
         });
@@ -29,7 +29,7 @@ function updateLocalStorage() {
 function createTask() {
     let listText = taskInput.value.trim();
     if (listText) {
-        tasks.push({text: listText, done: false});
+        tasks.push({ text: listText, done: false });
         taskInput.value = "";
         updateLocalStorage();
         schowTaskList();
@@ -37,3 +37,18 @@ function createTask() {
 }
 addTaskButton.addEventListener('click', createTask);
 schowTaskList();
+
+//Добавить новый тег
+const addTagButton = document.querySelector('#button__add_new_tag');
+const tagInput = document.querySelector('#tag__input');
+
+const tagList = document.querySelector('#tagList__input');
+
+function addNewTag() {
+    let newTag = tagInput.value;
+    let tagListItem = document.createElement('option');
+    tagListItem.value = newTag;
+    tagList.append(tagListItem);
+    tagInput.value = "";
+}
+addTagButton.addEventListener('click', addNewTag);
