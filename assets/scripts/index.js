@@ -1,8 +1,10 @@
 // Date and time, using moment.js
-const DATE = moment().locale('ru').format('DD MMMM YYYY');
-const TIME = moment().format('HH:mm');
-document.getElementById('header__date_and_time__date').textContent = DATE;
-document.getElementById('hedaer__date_and_time__time').textContent = TIME;
+const DATE = setInterval(function() {
+    const D = moment().locale('ru').format('DD MMMM YYYY');
+    const T = moment().format('HH:mm');
+document.getElementById('header__date_and_time__date').textContent = D;
+document.getElementById('hedaer__date_and_time__time').textContent = T;
+  }, 1000);
 
 // Creating tasks and saving to localStorage
 const taskInput = document.querySelector('.block__task__input__entry_field')
