@@ -13,8 +13,9 @@ function schowTaskList() {
     taskList.innerHTML = '';
     tasks.forEach(function (task, index) {
         const taskListItem = document.createElement('li');
+        taskListItem.setAttribute('class', 'task__text__list-item');
         taskListItem.innerHTML = `<input type='checkbox' ${task.done ? 'checked' : ''} />
-        <span>${task.text}</span> <button onclick="removeTask(this)">Удалить</button>`;
+        <span>${task.text}</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button class="button__archive">В архив</button>`;
         taskListItem.querySelector('input').addEventListener('change', function () {
             tasks[index].done = this.checked;
             updateLocalStorage();

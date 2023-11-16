@@ -134,6 +134,23 @@ body {
                             list-style: none;
                             @extend %text-font;
                             font-size: 1.5rem;
+                            .task__text__list-item {
+                                margin: 0 0.875rem 0.875rem 0;
+                            }
+                            .button__remove, .button__archive {
+                                border-radius: 3.125rem;
+                                border: none;
+                                width: 7.75rem;
+                                height: 2.5rem;
+                                flex-shrink: 0;
+                                background-color: $green;
+                                color: #FFF;
+                                @extend %text-font_size_s;
+                                font-size: 1.5rem;
+                                line-height: 1.41rem;
+                                cursor: pointer;
+                                margin-right: 0.25rem;
+                            }
                         }
                     }
                     .checkbox__task {
