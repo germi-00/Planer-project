@@ -20,7 +20,7 @@
         <p class="hedaer__date_and_time__time" id="hedaer__date_and_time__time"></p>
       </div>
       <ul class="header__menu">
-        <li><a class="header__menu__element" href="#">Раздел</a></li>
+        <li><a class="header__menu__element" href="archive.html">Архив</a></li>
         <li><a class="header__menu__element" href="#">Раздел</a></li>
         <li><a class="header__menu__element" href="#">Раздел</a></li>
       </ul>
@@ -37,6 +37,18 @@
         <input type="text" class="block__task__input__entry_field" id="task__input" placeholder="Введите задачу">
         <button class="block__task__button"><a class="block__task__button__text" href="#">Добавить</a></button>
       </div>
+      <!-- Инпуты для тегов -->
+      <input list="tagList__input" class="block__task__input__entry_field" placeholder="Выберите тег">
+
+      <datalist id="tagList__input">
+        <!-- <option value="Добавленный тег">-->
+      </datalist>
+
+      <input type="text" class="block__task__input__entry_field" id="tag__input" placeholder="Добавьте новый тег">
+
+      <button class="block__task__button" id="button__add_new_tag"><a class="block__task__button__text"
+          href="#">Добавить новый тег</a></button>
+<!-- Конец инпутов для тегов -->
       <div class="block__task_list">
         <div class="block__task_list__task">
           <label class="checkbox-inline">
