@@ -6,6 +6,60 @@ const DATE = setInterval(function () {
   document.getElementById("hedaer__date_and_time__time").textContent = T;
 }, 1000);
 
+//Секундомер
+
+let stopwatch = document.querySelector(".task__stopwatch");
+let startBtn = document.querySelector(".task__startBtn");
+let pauseBtn = document.querySelector(".task__pauseBtn");
+let resetBtn = document.querySelector(".task__resetBtn");
+let saveBtn = document.querySelector(".task__saveBtn");
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+let interval;
+
+function updateTime() {
+  seconds++;
+  if (seconds === 60) {
+    minutes++;
+    seconds = 0;
+  }
+  if (minutes === 60) {
+    hours++;
+    minutes = 0;
+  }
+  stopwatch.textContent = `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+}
+
+function startCount() {
+  interval = setInterval(updateTime, 1000);
+  startBtn.disabled = true;
+  pauseBtn.disabled = false;
+  resetBtn.disabled = false;
+  saveBtn.disabled = false;
+}
+
+function pauseCount() {
+  clearInterval(interval);
+  startBtn.disabled = false;
+  pauseBtn.disabled = true;
+  saveBtn.disabled = false;
+}
+
+function resetCount() {
+  clearInterval(interval);
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+  stopwatch.textContent = "00:00:00";
+  startBtn.disabled = false;
+  pauseBtn.disabled = true;
+  resetBtn.disabled = true;
+  saveBtn.disabled = true;
+}
+
 // Creating tasks and saving to localStorage
 const taskInput = document.querySelector(".block__task__input__entry_field");
 const taskList = document.querySelector(".task__text__list");
@@ -21,7 +75,17 @@ function schowTaskList() {
     } />
         <span>${
           task.text
-        }</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button class="button__archive">В архив</button>`;
+        }</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button class="button__archive">В архив</button>
+        <span>Секундомер: <span class="task__stopwatch">
+          ${hours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}
+        </span></span>
+        <button class="task__startBtn" onclick="startCount()">Старт</button>
+        <button class="task__pauseBtn" onclick="pauseCount(this)" disabled>Пауза</button>
+        <button class="task__resetBtn" onclick="resetCount(this)" disabled>Сброс</button>
+        <button class="task__saveBtn" onclick="saveCount(this)" disabled>Сохранить</button>`;
+
     taskListItem.querySelector("input").addEventListener("change", function () {
       tasks[index].done = this.checked;
       updateLocalStorage();
@@ -36,7 +100,13 @@ function updateLocalStorage() {
 function createTask() {
   let listText = taskInput.value.trim();
   if (listText) {
-    tasks.push({ text: listText, done: false });
+    tasks.push({
+      text: listText,
+      done: false,
+      stopwatch: `${hours.toString().padStart(2, "0")}:${minutes
+        .toString()
+        .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`,
+    });
     taskInput.value = "";
     updateLocalStorage();
     schowTaskList();
