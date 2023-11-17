@@ -129,15 +129,19 @@ body {
 
                 .checkbox-inline {
                     display: flex;
+
                     .block__task_list__task__text {
                         .task__text__list {
                             list-style: none;
                             @extend %text-font;
                             font-size: 1.5rem;
+
                             .task__text__list-item {
                                 margin: 0 0.875rem 0.875rem 0;
                             }
-                            .button__remove, .button__archive {
+
+                            .button__remove,
+                            .button__archive {
                                 border-radius: 3.125rem;
                                 border: none;
                                 width: 7.75rem;
@@ -153,6 +157,7 @@ body {
                             }
                         }
                     }
+
                     .checkbox__task {
                         fill: #F4F0E9;
                         stroke-width: 4px;
@@ -233,6 +238,11 @@ body {
                     line-height: 1.25rem;
                     width: 21.375rem;
                     height: 2.875rem;
+
+                    .footer__link_to_git {
+                        text-decoration: none;
+                        color: #65727B;
+                    }
                 }
 
                 .footer__menu {
@@ -278,4 +288,3 @@ body {
     @extend %text-font;
     font-size: 1.875rem;
 }
-
