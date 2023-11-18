@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "PT-Serif";
+    src: url(../fonts/PT_Serif/PTSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Noto-Serif";
+    src: url(../fonts/Noto_Serif/N);
+}
+
+.block__quotes_quote-text,
+.block__quotes_header-text,
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__heading,
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__list,
+body .container .block_counter .block_counter_element .block_counter_element_text,
+body .container .block_counter .block_counter_element .block_counter_element_number,
+body .container .block__task__header {
+    font-family: "Noto-Serif";
+    color: #28514F;
+    font-style: normal;
+    font-weight: 600;
+}
+
+body .container footer .footer__logo .logo,
+body .container .header .header__button__login .header__button__login__text,
+body .container .header .header__date_and_time,
+body .container .header .logo {
+    font-style: normal;
+    text-align: center;
+    font-family: "Noto-Serif";
+    font-style: normal;
+    font-weight: 700;
+    color: #28514F;
+    text-decoration: none;
+}
+
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__list .button__remove_from_archive {
+    font-family: "Noto-Serif";
+    font-style: normal;
+    color: rgba(40, 81, 79, 0.5);
+    font-weight: 500;
+}
+
+body .container footer .footer__second .footer__menu .footer__menu__element,
+body .container footer .footer__second .footer__autors,
+body .container footer .footer__logo .footer__itgirls,
+body .container .header .header__menu .header__menu__element {
+    font-family: "Noto-Serif";
+    font-style: normal;
+    color: #65727B;
+    font-weight: 400;
+}
+
+body {
+    background: #F9F7F4;
+}
+
+body .container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+body .container .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6.25rem;
+    border-bottom: 2px solid rgba(40, 81, 79, 0.3);
+    background: #F9F7F4;
+}
+
+body .container .header .logo {
+    font-size: 3.625rem;
+    font-style: normal;
+    line-height: 3.48rem;
+}
+
+#menu_header_logo {
+    text-decoration: none;
+    color: #28514F;
+}
+
+
+body .container .header .header__date_and_time {
+    display: flex;
+    color: #28514F;
+    font-size: 1.875rem;
+    line-height: 3.48rem;
+    margin: 2.19rem 5.75rem 1.87rem 4.44rem;
+}
+
+body .container .header .header__date_and_time .header__date_and_time__date {
+    padding: 0 1.62rem 0 0;
+}
+
+body .container .header .header__menu {
+    display: flex;
+    list-style-type: none;
+}
+
+body .container .header .header__menu .header__menu__element {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.41rem;
+    padding: 0 1.405rem 0 1.405rem;
+}
+
+body .container .header .header__button__login {
+    border-radius: 3.125rem;
+    background: #28514F;
+    width: 9.75rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+    border: none;
+}
+
+body .container .header .header__button__login .header__button__login__text {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.625rem;
+    line-height: 1.41rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+body .container .block__task_list {
+    margin: 5.38rem 0 5rem 10.94rem;
+    display: flex;
+}
+
+body .container .block_counter {
+    margin: 5.38rem 10.94rem 5rem 0;
+    display: flex;
+}
+
+body .container .block_counter .block_counter_element {
+    display: flex;
+}
+
+body .container .block_counter .block_counter_element .block_counter_element_text {
+    font-size: 1.875rem;
+    margin: 0;
+}
+
+body .container .block_counter .block_counter_element .block_counter_element_number {
+    padding-left: 1rem;
+    list-style: none;
+    font-size: 1.875rem;
+}
+
+body .container .block__task_list .block__task_list__task {
+    display: flex;
+    flex-shrink: 0;
+}
+
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__list {
+    padding-left: 0.5rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__heading {
+    font-size: 1.875rem;
+    margin: 0;
+}
+
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__list .task__text__list-item {
+    margin: 0 0.875rem 0.875rem 0;
+}
+
+body .container .block__task_list .block__task_list__task .block__task_list__task__text .task__text__list .button__remove_from_archive {
+    border-radius: 3.125rem;
+    border: none;
+    width: 8rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    background-color: #28514F;
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 1.41rem;
+    cursor: pointer;
+    margin-right: 0.25rem;
+}
+
+body .container .block__image {
+    background: rgba(40, 81, 79, 0.7);
+}
+
+body .container footer {
+    padding: 1.13rem 6rem;
+}
+
+body .container footer .footer__logo {
+    display: flex;
+    flex-direction: column;
+}
+
+body .container footer .footer__logo .logo {
+    font-size: 3.625rem;
+    font-style: normal;
+    line-height: 3.48rem;
+    text-align: start;
+}
+
+body .container footer .footer__logo .footer__itgirls {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 1.5rem 0 2rem 0;
+}
+
+body .container footer .footer__second {
+    display: flex;
+    align-items: flex-end;
+}
+
+body .container footer .footer__second .footer__autors {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    width: 21.375rem;
+    height: 2.875rem;
+}
+
+body .container footer .footer__second .footer__menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0 0 0 12rem;
+}
+
+body .container footer .footer__second .footer__menu .footer__menu__element {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 1.41rem;
+    padding: 0 1.405rem 0 1.405rem;
+}
+
+body .container footer .footer__second .footer__school_logo {
+    padding: 0 0 0 5.52rem;
+}
+
+
+/*# sourceMappingURL=style.css.map */
