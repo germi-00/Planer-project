@@ -27,7 +27,8 @@ body .container footer .footer__logo .logo, body .container .header .header__but
   font-weight: 700;
 }
 
-body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__comment, body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__remove, body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__archive, body .container .block__task__input .block__task__input__entry_field {
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__comment, body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__remove,
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__archive, body .container .block__task__input .block__task__input__entry_field {
   font-family: Noto Serif;
   font-style: normal;
   color: rgba(40, 81, 79, 0.5);
@@ -159,7 +160,8 @@ body .container .block__task_list .block__task_list__task .checkbox-inline .bloc
 body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .task__text__list-item {
   margin: 0 0.875rem 0.875rem 0;
 }
-body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__remove, body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__archive {
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__remove,
+body .container .block__task_list .block__task_list__task .checkbox-inline .block__task_list__task__text .task__text__list .button__archive {
   border-radius: 3.125rem;
   border: none;
   width: 7.75rem;
@@ -234,6 +236,10 @@ body .container footer .footer__second .footer__autors {
   line-height: 1.25rem;
   width: 21.375rem;
   height: 2.875rem;
+}
+body .container footer .footer__second .footer__autors .footer__link_to_git {
+  text-decoration: none;
+  color: #65727B;
 }
 body .container footer .footer__second .footer__menu {
   display: flex;
