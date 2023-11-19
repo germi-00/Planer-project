@@ -17,7 +17,7 @@ function schowTaskList() {
         const taskListItem = document.createElement('li');
         taskListItem.setAttribute('class', 'task__text__list-item');
         taskListItem.innerHTML = `<input type='checkbox' ${task.done ? 'checked' : ''} />
-        <span>${task.text}</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button class="button__archive">В архив</button>`;
+        <span class="task__item__text">${task.text}</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button onclick="changeTask(this)" class="button__change">Изменить</button><button class="button__archive">В архив</button>`;
         taskListItem.querySelector('input').addEventListener('change', function () {
             tasks[index].done = this.checked;
             updateLocalStorage();
@@ -53,6 +53,17 @@ function removeTask(event) {
     event.parentElement.remove();
     }
 
+// Функция изменения задачи
+//при нажатии на кнопку можно изменить текст задания
+// значение также изменяется и сохраняется снова в localstorage
+function changeTask() {
+let changeButton = document.querySelectorAll('.button__change')
+let task = document.querySelectorAll('.task__item__text');
+for (let i = 0; i < changeButton.length; i++) {
+  task[i].contentEditable = true;
+  task[i].focus();
+}
+}
 
 //Добавить новый тег
 const addTagButton = document.querySelector('#button__add_new_tag');
