@@ -185,7 +185,7 @@ body .container .block__task_list .block__task_list__task .block__task_list__tas
     flex-shrink: 0;
     background-color: #28514F;
     color: #FFF;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.41rem;
     cursor: pointer;
     margin-right: 0.25rem;
