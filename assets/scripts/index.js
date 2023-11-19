@@ -1,10 +1,10 @@
 // Date and time, using moment.js
-const DATE = setInterval(function() {
+const DATE = setInterval(function () {
     const D = moment().locale('ru').format('DD MMMM YYYY');
     const T = moment().format('HH:mm');
-document.getElementById('header__date_and_time__date').textContent = D;
-document.getElementById('hedaer__date_and_time__time').textContent = T;
-  }, 1000);
+    document.getElementById('header__date_and_time__date').textContent = D;
+    document.getElementById('hedaer__date_and_time__time').textContent = T;
+}, 1000);
 
 // Creating tasks and saving to localStorage
 const taskInput = document.querySelector('.block__task__input__entry_field')
@@ -23,7 +23,7 @@ function schowTaskList() {
             updateLocalStorage();
         });
         taskList.append(taskListItem);
-});
+    });
 };
 function updateLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -32,7 +32,7 @@ function updateLocalStorage() {
 function createTask() {
     let listText = taskInput.value.trim();
     if (listText) {
-        tasks.push({ text: listText, done: false });
+        tasks.push({ text: listText, done: false, archived: false }); //добавила дополнительное свойство archived 
         taskInput.value = "";
         updateLocalStorage();
         schowTaskList();
@@ -46,12 +46,12 @@ function removeTask(event) {
     let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
     tasks.forEach(task => {
         if (task.task === event.parentNode.children[1].value) {
-        tasks.splice(tasks.indexOf(task), 1);
+            tasks.splice(tasks.indexOf(task), 1);
         }
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
     event.parentElement.remove();
-    }
+}
 
 
 //Добавить новый тег
@@ -68,3 +68,20 @@ function addNewTag() {
     tagInput.value = "";
 }
 addTagButton.addEventListener('click', addNewTag);
+
+
+//Функция отправки задачи в архив по клику на кнопку "Архив"
+const archiveButtons = document.querySelectorAll('.button__archive');
+
+archiveButtons.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+        tasks[index].archived = !tasks[index].archived;
+        updateLocalStorage();
+    });
+});
+function updateLocalStorage() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+
+
