@@ -61,22 +61,22 @@ function changeTask() {
     let changeButton = document.querySelectorAll('.button__change')
     let task = document.querySelectorAll('.task__item__text');
     for (let i = 0; i < changeButton.length; i++) {
-        changeButton[i].addEventListener('click', () =>{
+        changeButton[i].addEventListener('click', () => {
             task[i].contentEditable = true;
             task[i].focus();
-            task[i].addEventListener('blur', () =>{
+            task[i].addEventListener('blur', () => {
                 saveTaskChange(i, task[i].textContent);
                 task[i].contentEditable = false;
-            }, 
-            {once: true},
-                );
+            },
+                { once: true },
+            );
         });
     }
-    }
-    function saveTaskChange(index, newText) {
-        tasks[index].text = newText;
-        updateLocalStorage();
-    }
+}
+function saveTaskChange(index, newText) {
+    tasks[index].text = newText;
+    updateLocalStorage();
+}
 
 //Добавить новый тег
 const addTagButton = document.querySelector('#button__add_new_tag');
@@ -97,8 +97,8 @@ addTagButton.addEventListener('click', addNewTag);
 //Функция отправки задачи в архив по клику на кнопку "Архив"
 const archiveButtons = document.querySelectorAll('.button__archive');
 
-archiveButtons.forEach(function (item, index) {
-    item.addEventListener('click', function () {
+archiveButtons.forEach(function (button, index) {
+    button.addEventListener('click', function () {
         tasks[index].archived = !tasks[index].archived;
         updateLocalStorage();
     });
@@ -106,6 +106,4 @@ archiveButtons.forEach(function (item, index) {
 function updateLocalStorage() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
-
-
 
