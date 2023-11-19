@@ -1,8 +1,10 @@
 // Date and time, using moment.js
-const DATE = moment().locale('ru').format('DD MMMM YYYY');
-const TIME = moment().format('HH:mm');
-document.getElementById('header__date_and_time__date').textContent = DATE;
-document.getElementById('hedaer__date_and_time__time').textContent = TIME;
+const DATE = setInterval(function () {
+    const D = moment().locale('ru').format('DD MMMM YYYY');
+    const T = moment().format('HH:mm');
+    document.getElementById('header__date_and_time__date').textContent = D;
+    document.getElementById('hedaer__date_and_time__time').textContent = T;
+}, 1000);
 
 // Creating tasks and saving to localStorage
 const taskInput = document.querySelector('.block__task__input__entry_field')
@@ -15,13 +17,14 @@ function schowTaskList() {
         const taskListItem = document.createElement('li');
         taskListItem.setAttribute('class', 'task__text__list-item');
         taskListItem.innerHTML = `<input type='checkbox' ${task.done ? 'checked' : ''} />
-        <span>${task.text}</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button class="button__archive">В архив</button>`;
+        <span class="task__item__text">${task.text}</span> <button class="button__remove" onclick="removeTask(this)">Удалить</button><button class="button__change">Изменить</button><button class="button__archive">В архив</button>`;
         taskListItem.querySelector('input').addEventListener('change', function () {
             tasks[index].done = this.checked;
             updateLocalStorage();
         });
         taskList.append(taskListItem);
-});
+        changeTask();
+    });
 };
 function updateLocalStorage() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -30,7 +33,7 @@ function updateLocalStorage() {
 function createTask() {
     let listText = taskInput.value.trim();
     if (listText) {
-        tasks.push({ text: listText, done: false });
+        tasks.push({ text: listText, done: false, archived: false }); //добавила дополнительное свойство archived 
         taskInput.value = "";
         updateLocalStorage();
         schowTaskList();
@@ -44,13 +47,36 @@ function removeTask(event) {
     let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
     tasks.forEach(task => {
         if (task.task === event.parentNode.children[1].value) {
-        tasks.splice(tasks.indexOf(task), 1);
+            tasks.splice(tasks.indexOf(task), 1);
         }
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
     event.parentElement.remove();
-    }
+}
 
+// Функция изменения задачи
+//при нажатии на кнопку можно изменить текст задания
+// значение также изменяется и сохраняется снова в localstorage
+function changeTask() {
+    let changeButton = document.querySelectorAll('.button__change')
+    let task = document.querySelectorAll('.task__item__text');
+    for (let i = 0; i < changeButton.length; i++) {
+        changeButton[i].addEventListener('click', () => {
+            task[i].contentEditable = true;
+            task[i].focus();
+            task[i].addEventListener('blur', () => {
+                saveTaskChange(i, task[i].textContent);
+                task[i].contentEditable = false;
+            },
+                { once: true },
+            );
+        });
+    }
+}
+function saveTaskChange(index, newText) {
+    tasks[index].text = newText;
+    updateLocalStorage();
+}
 
 //Добавить новый тег
 const addTagButton = document.querySelector('#button__add_new_tag');
@@ -66,3 +92,18 @@ function addNewTag() {
     tagInput.value = "";
 }
 addTagButton.addEventListener('click', addNewTag);
+
+
+//Функция отправки задачи в архив по клику на кнопку "Архив"
+const archiveButtons = document.querySelectorAll('.button__archive');
+
+archiveButtons.forEach(function (button, index) {
+    button.addEventListener('click', function () {
+        tasks[index].archived = !tasks[index].archived;
+        updateLocalStorage();
+    });
+});
+function updateLocalStorage() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+

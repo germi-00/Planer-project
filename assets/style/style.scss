@@ -246,6 +246,11 @@ body {
                     line-height: 1.25rem;
                     width: 21.375rem;
                     height: 2.875rem;
+
+                    .footer__link_to_git {
+                        text-decoration: none;
+                        color: #65727B;
+                    }
                 }
 
                 .footer__menu {
