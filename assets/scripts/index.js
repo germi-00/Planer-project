@@ -55,6 +55,30 @@ function removeTask(event) {
 	location.reload();
 }
 
+// Функция изменения задачи
+//при нажатии на кнопку можно изменить текст задания
+// значение также изменяется и сохраняется снова в localstorage
+function changeTask() {
+    let changeButton = document.querySelectorAll('.button__change')
+    let task = document.querySelectorAll('.task__item__text');
+    for (let i = 0; i < changeButton.length; i++) {
+        changeButton[i].addEventListener('click', () => {
+            task[i].contentEditable = true;
+            task[i].focus();
+            task[i].addEventListener('blur', () => {
+                saveTaskChange(i, task[i].textContent);
+                task[i].contentEditable = false;
+            },
+                { once: true },
+            );
+        });
+    }
+}
+function saveTaskChange(index, newText) {
+    tasks[index].text = newText;
+    updateLocalStorage();
+}
+
 //Добавить новый тег
 const addTagButton = document.querySelector('#button__add_new_tag');
 const tagInput = document.querySelector('#tag__input');
@@ -82,3 +106,15 @@ archiveButtons.forEach(function (item, index) {
 function updateLocalStorage() {
 	localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+
+archiveButtons.forEach(function (button, index) {
+    button.addEventListener('click', function () {
+        tasks[index].archived = !tasks[index].archived;
+        updateLocalStorage();
+    });
+});
+function updateLocalStorage() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+
