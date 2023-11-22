@@ -26,6 +26,7 @@ body {
                 font-size: 3.625rem;
                 font-style: normal;
                 line-height: 3.48rem;
+                text-decoration: none;
             }
 
             .header__date_and_time {
@@ -227,6 +228,7 @@ body {
                     font-style: normal;
                     line-height: 3.48rem;
                     text-align: start;
+                    text-decoration: none;
                 }
 
                 .footer__itgirls {
@@ -345,12 +347,21 @@ body {
 
                     .footer__autors {
                         height: 100%;
+
+                        .footer__link_to_git {
+                            text-decoration: none;
+                            color: #65727B;
+                        }
                     }
 
                     .footer__menu {
                         padding: 0;
                         display: flex;
                         justify-content: space-around;
+
+                        #footer__element_quote {
+                            min-width: 10rem;
+                        }
                     }
 
                     .footer__school_logo {
@@ -539,20 +550,25 @@ body {
                     .footer__autors {
                         width: 100%;
                         height: 100%;
-                    }
 
-                    .footer__menu {
-                        padding: 0;
-                        display: flex;
-                        justify-content: space-around;
-                    }
+                        .footer__link_to_git {
+                            text-decoration: none;
+                            color: #65727B;
+                        }
 
-                    .footer__school_logo {
-                        //display: flex;
-                        //flex-direction: column;
-                        //justify-content: center;
-                        //align-items: center;
-                        padding: 0;
+                        .footer__menu {
+                            padding: 0;
+                            display: flex;
+                            justify-content: space-around;
+                        }
+
+                        .footer__school_logo {
+                            //display: flex;
+                            //flex-direction: column;
+                            //justify-content: center;
+                            //align-items: center;
+                            padding: 0;
+                        }
                     }
                 }
             }
